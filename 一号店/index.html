@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>1号店首页</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				/*border: 1px solid;*/
+				color: #535353;
+				font-size: 10px;
+			}
+			
+			#headOne{
+				height: 35px;
+				/*border: 1px solid red;*/
+				background: linear-gradient(to bottom, #d1d1d1, #f4f4f4);
+			}
+			
+			#headLogo{
+				height: 140px;
+				/*border: 1px solid red;*/
+				padding-right: 200px;
+			}
+			
+			#first{
+				margin: 0 auto;
+				width: 1200px;
+				height: 450px;
+				/*border: 1px solid yellowgreen;*/
+			}
+			
+			#mulu{
+				float: left;
+				width: 200px;
+			}
+			
+			#info{
+				margin-left: 5px;
+				float: left;
+				width: 750px;
+				position: relative;
+			}
+			
+			#news{
+				float: right;
+				width: 180px;
+			}
+			
+			#second{
+				margin: 0 auto;
+				margin-top: 20px;
+				width: 1200px;
+				height: 230px;
+				/*border: 1px solid yellowgreen;*/
+			}
+			
+			#left{
+				float: left;
+				width: 190px;
+				background-color: #c5ecec;
+			}
+			
+			#right{
+				float: right;
+				position: relative;
+				/*border: 1px solid deeppink;*/
+			}
+			
+			#right>img:nth-of-type(1){
+				right: 955px;
+				bottom: 70px;
+				position: absolute;
+				z-index: 10;
+			}
+			
+			#right>img:nth-of-type(2){
+				bottom: 70px;
+				left: 955px;
+				position: absolute;
+				z-index: 10;
+			}
+					
+			#right p{
+				height: 40px;
+			}
+			
+			#right>div{
+				display: inline-block;
+				text-align: center;
+			}
+			
+			#ad{
+				margin: 0 auto;
+				margin-top: 20px;
+				width: 1200px;
+				height: 110px;
+				/*border: 1px solid yellowgreen;*/
+			}
+			
+			#service{
+				margin: 0 auto;
+				width: 900px;
+				height: 150px;
+				/*border: 1px solid yellowgreen;*/
+			}
+			
+			#note1{
+				margin: 0 auto;
+				padding: 5px;
+				width: 1100px;
+				height: 180px;
+				/*border: 1px solid yellowgreen;*/
+			}
+			
+			#note2{
+				border-top: 1px solid #D1D1D1;
+				margin: 0 auto;
+				width: 1100px;
+				height: 100px;
+				/*border: 1px solid yellowgreen;*/
+			}
+			
+			#lastPics{
+				width: 800px;
+				margin: 0 auto;
+				/*border: 1px solid yellowgreen;*/
+			}
+			
+			#lastPics img{
+				margin: 15px;
+				float: left;
+				width: 100px;
+				height: 30px;
+				border-radius: 10%;
+			}
+			
+			footer p{
+				text-align: center;
+			}
+			
+			#service li{
+				margin-top: 35px;
+				margin-left: 25px;
+				margin-right: 25px;
+				width: 150px;
+				text-align: center;
+				list-style: none;
+				display: inline-block;
+				/*border: 1px solid deeppink;*/
+			}
+			
+			footer h2{
+				height: 30px;
+				line-height: 30px;
+				font-weight: normal;
+				color: #535353;
+				font-size: 14px;
+			}
+			
+			#note1 div{
+				margin-right: 55px;
+				width: 100px;
+				float: left;
+			}
+			
+			#note1 div p{
+				height: 20px;
+				line-height: 20px;
+				text-align: left;
+			}
+			
+			a:hover{
+				text-decoration: none;
+				color: orangered;
+			}
+			
+			#QRcode{
+				margin-right: 0;
+				float: right;
+				width: 300px;
+				/*border: 1px solid deeppink;*/
+			}
+			
+			#QRcode section:nth-of-type(1){
+				width: 155px;
+				float: left;
+			}
+			
+			#QRcode section:nth-of-type(2){
+				width: 140px;
+				float: left;
+			}
+			
+			#QRcode a{
+				font-size: 13px;
+			}
+			
+			footer section p{
+				float: left;
+				text-align: left;
+				height: 30px;
+				line-height: 30px;
+				
+			}
+			
+			footer section img,footer section a{
+				vertical-align: middle;
+			}
+			
+			#phoneNo{
+				font-size: 1.75rem;
+				color: orangered;
+			}
+			
+			.name{
+				font-size: 15px;
+				font-weight: bold;
+			}
+			
+			.price{
+				font-size: 18px;
+				font-weight: bold;
+				color: orangered;
+			}
+			
+			.salePics{
+				width: 245px;
+				text-align: center;
+				float: left;
+				border: 1px solid #D1D1D1;
+				position: relative;
+			}
+			
+			.hot{
+				position: absolute;
+				left: 20px;
+				z-index: 10px;
+			}
+			
+			.salePics a{
+				text-decoration: none;
+			}
+			
+			#search{
+				margin-left: 150px;
+				margin-top: 50px;
+				float: left;
+			}
+			
+			#trolley{
+				width: 100px;
+				height: 30px;
+				margin-top: 55px;
+				margin-right: 165px;
+				float: right;
+				background-color: #e2e2e2;
+				text-align: center;
+				border: 1px solid #d1d1d1;
+			}
+			
+			#trolley a{
+				text-decoration: none;
+				font-size: 13px;
+			}
+			
+			img,a{
+				vertical-align: middle;
+			}
+			
+			#search2{
+				margin: 0;
+				width: 350px;
+				height: 35px;
+			}
+			
+			#submit{
+				margin: 0;
+				background-color: red;
+				color: white;
+				font-size: 14px;
+				height: 35px;
+				width: 75px;
+			}
+			
+			#mulu li{
+				color: white;
+				font-size: 12px;
+				height: 29px;
+				line-height: 15px;
+				
+			}
+			
+			#mulu li a{
+				color: white;
+				text-decoration: none;
+				font-size: 12px;
+			}
+			
+			#mulu li a:hover{
+				text-decoration: underline;
+			}
+			
+			#infoLink{
+				margin-top: 5px;
+			}
+			
+			#infoLink a{
+				font-size: 14px;
+				text-decoration: none;
+				color: black;
+				font-weight: bold;
+				margin-right: 40px;
+			}
+			
+			#info img{
+				margin-top: 5px;
+			}
+			
+			#search a{
+				text-decoration: none;
+			}
+			
+			#note1 a{
+				text-decoration: none;
+			}
+			
+			#headOne a{
+				text-decoration: none;
+				font-size: 12px;
+			}
+			
+			#news>div{
+				border: #D1D1D1 1px solid;
+			}
+			
+			#news a{
+				text-decoration: none;
+			}
+			
+			#newsli p{
+				height: 35px;
+				line-height: 35px;
+			}
+			
+			.newsli{
+				font-size: 13px;
+				font-weight: bold;
+			}
+			
+			#imgLeft{
+				position: absolute;
+				z-index: 10;
+				bottom: 150px;
+			}
+			
+			#imgRight{
+				position: absolute;
+				z-index: 10;
+				bottom: 150px;
+				left: 717px;
+			}
+			
+			#headOne li{
+				display: inline-block;
+				margin-right: 20px;
+			}
+			
+			#move_list{
+				/*position: absolute;
+				left: 50%;
+				top: 29px;*/
+				display: none;
+				z-index: 10;
+			}
+			
+			ul[id="move_list"]{
+				text-align: center;
+				background-color: white;
+				position: absolute;
+				right: 225px;
+				width: 100px;
+				height: 200px;
+				border: 1px #000000 solid;
+				display: block;
+			}
+			
+			#move_list li{
+				margin: 10px;
+				font-size: 13px;
+			}
+			
+			#headOne li:hover ul{
+				display: block;
+			}
+			
+			ul,li{
+				margin: 0;
+				padding: 0;
+			}
+			
+			#mulu img{
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div id="headOne">
+				<div style="float: left; margin-left: 10px; margin-top: 10px; font-size: 12px;">
+					送货至：四川
+				</div>
+				<div style="float: right;">
+					<a href="#">你好！请登录</a>
+					<a href="#" style="color: orangered;">免费注册</a>|
+					<a href="#">我的订单</a>|
+					<ul style="list-style: none; display: inline-block; font-size: 12px;">
+						<li>
+							<a>
+								收藏夹
+							</a>
+						</li>
+						<li>
+							<a>
+								客户服务
+								<ul id="move_list">
+									<li><a href="#">包裹追踪</a></li>
+									<li><a href="#">创建问题</a></li>
+									<li><a href="#">在线退换货</a></li>
+									<li><a href="#">在线投诉</a></li>
+									<li><a href="#">配送范围</a></li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a>
+								网址导航
+							</a>
+						</li>
+					</ul>
+					|<a href="#">
+						关注我们：
+						<img src="img/sh2.png" >
+						&nbsp;
+						<img src="img/sh1.png" >
+					</a>|
+					<a href="#">
+						手机版
+						<img src="img/i_tel.png" >
+					</a>
+
+				</div>
+			</div>
+			<div id="headLogo">
+				<img src="img/logo.png" style="margin-top: 30px; float: left;">
+				<div id="search">
+					<form action="" method="post" style="border: 2px solid red; height: 36px;">
+						<input style="border: 0; height: 30px;" id="search2" type="search" name="" required="" placeholder="请输入关键字" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN">
+						<input id="submit" type="submit" value="搜索" style="border: 0; margin: 0;"/>
+					</form>
+					<div style="margin-top: 5px;">
+						<a href="#">咖啡</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">iPhone 6S</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">新鲜美食</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">蛋糕</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">日用品</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">连衣裙</a>
+					</div>
+				</div>
+				<div id="trolley">
+					<div style="margin: 8px;">
+						<a href="#" >
+							<img src="img/car.png" >
+							&nbsp;&nbsp;&nbsp;购物车
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div id="first">
+				<div id="mulu">
+					<div style="background-color: #ff3741;">
+						<h2 style="color: white; font-size: 13px; padding: 5px; text-indent: 1em; height: 20px; line-height: 27px;">全部商品分类</h2>
+						<ul style="background-color: #b0051c; list-style: none;">
+							<li style="background: url(img/nav1.png) no-repeat; margin: 10px;">
+								<!--<img src="img/nav1.png">-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">进口食品</a>、
+								<a href="#">生鲜</a>
+							</li>
+							<li style="background: url(img/nav2.png) no-repeat; margin: 10px;">
+								<!--<img src="img/nav2.png">-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">食品</a>、
+								<a href="#">饮料</a>、
+								<a href="#">酒</a>
+							</li>
+							<li style="background: url(img/nav3.png) no-repeat; margin: 6px;">
+								<!--<img src="img/nav3.png" >-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">母婴</a>、
+								<a href="#">玩具</a>、
+								<a href="#">童装</a>
+							</li>
+							<li style="background: url(img/nav4.png) no-repeat; margin: 6px;">
+								<!--<img src="img/nav4.png" >-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">家居</a>、
+								<a href="#">家庭清洁</a>、
+								<a href="#">纸品</a>
+							</li>
+							<li style="background: url(img/nav5.png) no-repeat; margin: 10px;">
+								<!--<img src="img/nav5.png" >-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">美妆</a>、
+								<a href="#">个人护理</a>、
+								<a href="#">洗护</a>
+							</li>
+							<li style="background: url(img/nav6.png) no-repeat; margin: 6px;">
+								<!--<img src="img/nav6.png" >-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">女装</a>、
+								<a href="#">内衣</a>、
+								<a href="#">中老年</a>
+							</li>
+							<li style="background: url(img/nav7.png) no-repeat; margin: 6px;">
+								<!--<img src="img/nav7.png" >-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">鞋靴</a>、
+								<a href="#">箱包</a>、
+								<a href="#">腕表配饰</a>
+							</li>
+							<li style="background: url(img/nav8.png) no-repeat; margin: 6px;">
+								<!--<img src="img/nav8.png" >-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">男装</a>、
+								<a href="#">运动</a>
+							</li>
+							<li style="background: url(img/nav9.png) no-repeat; margin: 6px;">
+								<!--<img src="img/nav9.png" >-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">手机</a>、
+								<a href="#">小家电</a>、
+								<a href="#">电脑</a>
+							</li>
+							<li style="background: url(img/nav10.png) no-repeat; margin: 6px;">
+								<!--<img src="img/nav10.png" >-->
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">礼品</a>、
+								<a href="#">充值</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="info">
+					<div id="infoLink">
+						<a href="#">首页</a>
+						<a href="#">自营超市</a>
+						<a href="#">1号团</a>
+						<a href="#">1号超市</a>
+						<a href="#">女装</a>
+						<a href="#">美妆</a>
+						<a href="#">1号海归</a>
+						<a href="#">团购</a>
+					</div>
+					<img src="img/ban1.jpg" width="750px" height="370px" >
+					<div id="imgLeft">
+						<img src="img/b_left.png" >
+					</div>
+					<div id="imgRight">
+						<img src="img/b_right.png" >
+					</div>
+				</div>
+				<div id="news">
+					<section style="margin-bottom: 7px; height: 25px;">
+						<section style="float: right;">
+							<a href="#"><img src="img/phone.png" width="100px" height="25px"></a>
+						</section>
+					</section>
+					<div style="height: 20px;">
+						<p style="float: left; font-size: 14px; font-weight: bold; padding-left: 10px;">快讯</p>
+						<p style="float: right; line-height: 20px;"><a href="#">更多&gt;</a></p>
+					</div>
+					<div id="newsli">
+						<p><span class="newsli">【特惠】</span>一轮明月 表无尽惦念</p>
+						<p><span class="newsli">【公告】</span>好奇金装成长裤新品上市</p>
+						<p><span class="newsli">【特惠】</span>大牌闪购抢！</p>
+						<p><span class="newsli">【公告】</span>发福利 买车就抢千元油卡</p>
+						<p><span class="newsli">【公告】</span>家电低至五折</p>
+					</div>
+					<div style="font-size: 14px; font-weight: bold; padding-left: 10px; height: 35px; line-height: 35px;">
+						一号钱包
+					</div>
+					<div id="">
+						<p style="height: 20px; line-height: 20px;">收益日结，收益赚High!</p>
+						<img src="img/oneAD.jpg" width="180px" height="110px" >
+					</div>
+				</div>
+			</div>
+			<div id="second">
+				
+				<div id="left">
+					<img src="img/l_img.jpg" />
+					<div style="width: 100px; margin: 0 auto;">
+						<span style="margin-right: 10px; width: 50px; background-color: orangered; color: white; font-size: 14px;">
+							￥53.00
+						</span>
+						<span style="color: orangered; font-size: 10px;">
+							16R
+						</span>
+					</div>
+				</div>
+				
+				<div id="right">
+					<img src="img/b_left.png" >
+					<img src="img/b_right.png" >
+					<img src="" >
+					<div class="salePics">
+						<img src="img/hot.png" class="hot" >
+						<div class="pics">
+							<img src="img/hot1.jpg" >
+						</div>
+						<div style="height: 40px;">
+							<a href="#">
+							<span class="name">
+							德国进口
+							</span>
+							<br>
+							德亚全脂牛奶200ml*48盒
+							</a>
+						</div>
+						<div style="height: 30px;"><span class="price">￥189</span> 26R</div>
+					</div>
+					<div class="salePics">
+						<img src="img/hot.png" class="hot" >
+						<div class="pics">
+							<img src="./img/hot2.jpg" >
+						</div>
+						<div style="height: 40px;">
+							<a href="#">
+								<span class="name">
+								iphone 6S
+								</span>
+								<br>
+								Apple/苹果iPhone 6S Plus公开版
+							</a>
+						</div>
+						<div style="height: 30px;"><span class="price">￥5288</span> 25R</div>
+					</div>
+					<div class="salePics">
+						<img src="img/hot.png" class="hot" >
+						<div class="pics">
+							<img src="img/hot3.jpg" >
+						</div>
+						<div style="height: 40px;">
+							<a href="#">
+								<span class="name">
+								倩碧特惠组合套装
+								</span>
+								<br>
+								倩碧补水组合套装8折促销
+							</a>
+						</div>
+						<div style="height: 30px;"><span class="price">￥368</span> 18R</div>
+					</div>
+					<div class="salePics">
+						<img src="img/hot.png" class="hot" >
+						<div class="pics">
+							<img src="img/hot4.jpg" >
+						</div>
+						<div style="height: 40px;">
+							<a href="#">
+								<span class="name">
+								品利特技橄榄油
+								</span>
+								<br>
+								750ml*4瓶装组合 西班牙原装进口
+							</a>
+						</div>
+						<div style="height: 30px;"><span class="price">￥280</span> 30R</div>
+					</div>
+					
+				</div>
+			</div>
+			<div id="ad">
+				<img src="img/mban_2.jpg">
+			</div>
+		</section>
+		<footer>
+			<div id="service">
+				<ul>
+					<li>
+						<img src="img/b1.png" >
+						<h2>正品保障</h2>
+						<p>正品行货 放心购买</p>
+					</li>
+					<li>
+						<img src="img/b2.png" >
+						<h2>满38包邮</h2>
+						<p>满38包邮 免运费</p>
+					</li>
+					<li>
+						<img src="img/b3.png" >
+						<h2>天天低价</h2>
+						<p>天天低价 畅选无忧</p>
+					</li>
+					<li>
+						<img src="img/b4.png" >
+						<h2>准时送达</h2>
+						<p>收货时间由你做主</p>
+					</li>
+				</ul>
+			</div>
+			<div id="note1">
+				<div>
+					<h2>新手上路</h2>
+					<p><a href="">售后流程</a></p>
+					<p><a href="">购物流程</a></p>
+					<p><a href="">订购方式</a></p>
+					<p><a href="">隐私声明</a></p>
+					<p><a href="">推荐分析说明</a></p>
+				</div>
+				<div>
+					<h2>配送与支付</h2>
+					<p><a href="">活到付款区域</a></p>
+					<p><a href="">配送支付查询</a></p>
+					<p><a href="">支付方式说明</a></p>
+				</div>
+				<div>
+					<h2>会员中心</h2>
+					<p><a href="">资金管理</a></p>
+					<p><a href="">我的收藏</a></p>
+					<p><a href="">我的订单</a></p>
+				</div>
+				<div>
+					<h2>服务保证</h2>
+					<p><a href="">退换货原则</a></p>
+					<p><a href="">售后服务保证</a></p>
+					<p><a href="">产品质量保证</a></p>
+				</div>
+				<div>
+					<h2>联系我们</h2>
+					<p><a href="">网站故障报告</a></p>
+					<p><a href="">购物咨询</a></p>
+					<p><a href="">投诉与建议</a></p>
+				</div>
+				<section id="QRcode">
+					<section>
+						<img src="img/er.gif" >
+						<img src="img/ss.png" >
+					</section>
+					<section>
+						<p>
+							<a href="#"><img src="img/b_sh_1.png" >新浪微博</a>
+						</p>
+						<p>
+							<a href="#"><img src="img/b_sh_2.png" >腾讯微博</a>
+						</p>
+						<p>
+							服务热线：<br>
+							<span id="phoneNo">400-123-4567</span>
+						</p>
+					</section>
+				</section>
+			</div>
+			<div id="note2">
+				<p>备案/许可证编号。。。。。。。。。。。。。。。。。</p>
+				<div id="lastPics">
+					<img src="img/b_1.gif" >
+					<img src="img/b_2.gif" >
+					<img src="img/b_3.gif" >
+					<img src="img/b_4.gif" >
+					<img src="img/b_5.gif" >
+					<img src="img/b_6.gif" >
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

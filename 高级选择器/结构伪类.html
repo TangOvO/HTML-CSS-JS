@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css结构伪类选择器</title>
+		<style type="text/css">
+			/*body父元素里第二个类型为p的后代元素，每一代单独计数，下表从1开始*/
+			/*body p:nth-of-type(2){
+				background: yellow;
+			}*/
+			/**
+			 * 类型优先，先看类型，先找p标签，然后找他们父亲，只要这个p标签是它父亲的第一个孩子就行
+			 */
+			body p:first-of-type{
+				background: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>结构伪类选择器</h2>
+		<h3>结构伪类选择器1</h3>
+		<p>p1</p>
+		<ul>
+			<li>
+				li1
+				<p>p2</p>
+				<p>p3</p>
+			</li>
+			<li>li2</li>
+			<li>li3</li>
+		</ul>
+		<p>p4</p>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>相邻兄弟选择器</title>
+		<style type="text/css">
+			p,ul{
+				border: 1px solid red;
+			}
+			/*相邻兄弟选择器*/
+			.active + p{
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<p>0</p>
+		<p class="active">1</p>
+		<p>2</p><!--选择紧挨的弟弟-->
+		<p>3</p>
+		<ul>
+			<li>
+				<p>4</p>
+			</li>
+			<li>
+				<p>5</p>
+			</li>
+			<li>
+				<p>6</p>
+			</li>
+		</ul>
+	</body>
+</html>

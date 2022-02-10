@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>外边距</title>
+		<style type="text/css">
+			body,h2{
+				border: 1px solid #0000FF;
+				margin: 20px;
+			}
+			
+			.box{
+				width: 298px;
+				height: 300px;
+				border: 3px solid red;
+				margin: 50px auto; /* 让整个盒子居中, 第一个值调整上下位置*/
+			}
+			h2{
+				font-size: 16px;
+				background-color: #3a6587;
+				height: 45px;
+				line-height: 60px;
+				color: #FFF;
+				border: 1px solid deeppink;
+			}
+			div{
+				border: 1px solid #0000FF;
+				margin-bottom: 20px;
+			}
+			form{
+				background: #c8ece3;
+				border: 1.5px solid #FFFF00;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h2>会员登录</h2>
+			<form action="#" method="">
+				<div>
+					<strong class="name">姓名：</strong>
+					<input type="text"/>
+				</div>
+				<div>
+					<strong class="name">邮箱：</strong>
+					<input type="text"/>
+				</div>
+				<div>
+					<strong class="name">电话：</strong>
+					<input type="text"/>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
